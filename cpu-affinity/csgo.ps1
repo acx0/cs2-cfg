@@ -15,5 +15,7 @@ if (!(Get-Process csgo -ErrorAction SilentlyContinue)) {
     Write-Host "csgo.exe already running"
 }
 
+Write-Host -NoNewline "setting affinity..."
 # (Get-Process csgo).ProcessorAffinity = [Convert]::ToInt64("5500", 16)
 (Get-Process csgo).ProcessorAffinity = [Convert]::ToInt64("0101010100000000", 2)
+Write-Host "done"
