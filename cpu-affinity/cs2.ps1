@@ -3,8 +3,7 @@
 
 if (!(Get-Process cs2 -ErrorAction SilentlyContinue)) {
     # note: launching cs2.exe directly won't allow joining VAC-protected servers
-    #start steam://rungameid/2279720    # still launches csgo.exe...
-    Write-Host "cs2.exe not running, launch manually via Steam > Library > CS:GO`n"
+    start steam://rungameid/730
 
     Write-Host -NoNewline "waiting for cs2.exe"
     while (!(Get-Process cs2 -ErrorAction SilentlyContinue)) {
