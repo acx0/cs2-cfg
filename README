@@ -1,0 +1,14 @@
+setup:
+    # via git bash (msys)
+    $ cd '/c/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg'
+    $ git clone https://github.com/acx0/csgo-cfg tmp
+    $ mv tmp/.git .
+    $ rm -r tmp
+    $ git checkout .
+
+    # create shortcut to shell:
+    $ start .
+    # right-click cpu-affinity/shell.bat -> Show more options -> Send to -> Desktop
+
+launching via shell:
+    > ./isolate.ps1; ./cs2.ps1
