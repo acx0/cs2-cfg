@@ -1,6 +1,9 @@
 # prereq: enable powershell script execution:
 #   > Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 
+Write-Host "deprecated; use cs2.ps1"
+return
+
 if (!(Get-Process csgo -ErrorAction SilentlyContinue)) {
     # note: running csgo.exe directly throws error now
     start steam://rungameid/730
