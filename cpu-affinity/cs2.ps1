@@ -15,6 +15,9 @@ if (!(Get-Process cs2 -ErrorAction SilentlyContinue)) {
     Write-Host "cs2.exe already running"
 }
 
+Write-Host "skipping core-pinning"
+return
+
 Write-Host -NoNewline "setting affinity..."
 (Get-Process cs2).ProcessorAffinity = [Convert]::ToInt64("1111111100000000", 2)
 Write-Host "done"
